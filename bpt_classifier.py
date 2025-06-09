@@ -1,9 +1,13 @@
-import requests
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+"""Generate BPT diagrams for SDSS galaxies."""
+
 from io import StringIO
+from typing import Optional
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import requests
+import seaborn as sns
 
 # --- Configuration & Scientific Constants ---
 
@@ -31,9 +35,12 @@ WHERE
     p.nii_6584_flux > 3 * p.nii_6584_flux_err
 """
 
+# Output filename for the generated plot
+OUTPUT_FILE = "BPT_Diagram.png"
+
 # --- BPT Demarcation Line Functions ---
 
-def kauffmann_2003(log_nii_ha):
+def kauffmann_2003(log_nii_ha: float | pd.Series) -> float | pd.Series:
     """
     The Kauffmann et al. (2003) demarcation line.
     Separates pure star-forming galaxies from composite galaxies.
@@ -41,7 +48,7 @@ def kauffmann_2003(log_nii_ha):
     """
     return 0.61 / (log_nii_ha - 0.05) + 1.3
 
-def kewley_2001(log_nii_ha):
+def kewley_2001(log_nii_ha: float | pd.Series) -> float | pd.Series:
     """
     The Kewley et al. (2001) 'maximum starburst' line.
     Separates composite galaxies from true AGN.
@@ -51,7 +58,7 @@ def kewley_2001(log_nii_ha):
 
 # --- Main Application Logic ---
 
-def fetch_sdss_data(query, url):
+def fetch_sdss_data(query: str, url: str) -> Optional[pd.DataFrame]:
     """
     Fetches data from the SDSS server using the provided SQL query.
     
@@ -60,7 +67,8 @@ def fetch_sdss_data(query, url):
         url (str): The API endpoint URL.
         
     Returns:
-        pandas.DataFrame: A DataFrame containing the query results.
+        Optional[pandas.DataFrame]: A DataFrame containing the query results or
+        ``None`` if the request fails.
     """
     print("🛰️  Querying SDSS database... This may take a moment.")
     params = {'query': query, 'format': 'csv'}
@@ -78,7 +86,7 @@ def fetch_sdss_data(query, url):
         print(f"❌ Error fetching data: {e}")
         return None
 
-def process_and_classify(df):
+def process_and_classify(df: pd.DataFrame) -> pd.DataFrame:
     """
     Processes the raw data to calculate BPT ratios and classifies galaxies.
     
@@ -116,7 +124,7 @@ def process_and_classify(df):
     
     return df
 
-def create_bpt_plot(df):
+def create_bpt_plot(df: pd.DataFrame, output: str = OUTPUT_FILE) -> str:
     """
     Creates and saves a publication-quality BPT diagram.
     
@@ -164,17 +172,22 @@ def create_bpt_plot(df):
     plt.tight_layout()
     
     # Save the figure
-    output_filename = 'BPT_Diagram.png'
-    plt.savefig(output_filename, dpi=300)
-    print(f"✅ Plot saved as {output_filename}")
+    plt.savefig(output, dpi=300)
+    print(f"✅ Plot saved as {output}")
     plt.show()
+    return output
 
 # --- Main execution block ---
-if __name__ == "__main__":
+
+def main() -> None:
+    """Entry point for command-line execution."""
     raw_data = fetch_sdss_data(SDSS_QUERY, SDSS_API_URL)
-    
     if raw_data is not None and not raw_data.empty:
         classified_data = process_and_classify(raw_data)
         create_bpt_plot(classified_data)
     else:
         print("❌ Could not generate plot due to data fetching errors.")
+
+
+if __name__ == "__main__":
+    main()
