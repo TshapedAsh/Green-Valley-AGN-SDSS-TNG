@@ -1,48 +1,37 @@
-# AGN Classifier with BPT Diagrams
+# Green Valley: AGN, SDSS, TNG
 
-This repository contains a small Python tool to query the Sloan Digital Sky Survey (SDSS),
-classify galaxies using [Baldwin-Phillips-Terlevich (BPT)] diagrams and
-visualize the result.
+This repository contains the code and materials for the paper "Where Are the Green-Valley AGN in Illustris-TNG? A Host-Galaxy Demographics Test with SDSS" (submitted to MNRAS).
 
-![Example output](BPT_Diagram.png)
+## Overview
+This project compares AGN host galaxies from SDSS observations and IllustrisTNG simulations, focusing on green-valley demographics, star-formation rates, and emission-line diagnostics. The main analysis is in the Jupyter notebook `master_Copy.ipynb`.
 
-## Scientific Context
-The hardness of a galaxy's ionizing radiation reveals whether its emission is
-powered by young stars or by an active galactic nucleus (AGN). BPT diagrams plot
-ratios of strong optical emission lines to disentangle these scenarios.
-This project uses the empirical separation from **Kauffmann et al. (2003)** and
-the theoretical maximum starburst line from **Kewley et al. (2001)** to label
-galaxies as *Star-Forming*, *Composite* or *AGN*.
+Key findings:
+- A ~3 dex discrepancy in SFR between SDSS AGN and TNG green-valley hosts.
+- TNG overproduces quenched green-valley galaxies without optical AGN signatures.
 
-## How It Works
-1. **Query SDSS** – A SQL query retrieves emission line fluxes from the MPA-JHU
-   catalog (SDSS DR8). Internet access is required for this step.
-2. **Process Data** – Pandas computes the relevant line ratios on a logarithmic
-   scale.
-3. **Classify Galaxies** – Each object is compared to the Kauffmann and Kewley
-   curves to determine its ionization source.
-4. **Visualize** – Matplotlib and seaborn generate a density plot with the
-   demarcation lines annotated.
+## Repository Structure
+- `master_Copy.ipynb`: Main Jupyter notebook with data loading, processing, analysis, and figures.
+- `data/`: Input catalogs (FITS/HDF5 files from SDSS/IllustrisTNG). **Note**: Large files are .gitignored; download from [SDSS DR7](https://www.sdss.org/dr7/) and [IllustrisTNG](https://www.tng-project.org/data/) public archives.
+- `outputs/figures/`: Generated plots (run the notebook to populate).
+- `paper/`: Paper draft PDF.
+- `docs/`: Supplementary files (e.g., OCRed notebook output with figures).
+- `requirements.txt`: Python dependencies.
 
-## Quick Start
-```bash
-# Clone and enter the repository
-git clone <your-repo-url>
-cd <your-repo-directory>
+## How to Run
+1. Clone the repo: `git clone https://github.com/YOUR_USERNAME/AGN_Classifier_with_BPT-Diagrams.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Download required data files into `./data/` (e.g., `gal_info_dr7_v5_2.fit`, `aperture_masses.hdf5` from sources above).
+4. Run the notebook: `jupyter notebook master_Copy.ipynb`
 
-# (Optional) create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows use venv\Scripts\activate
+## Dependencies
+- Python 3.11+
+- See `requirements.txt` for pinned versions.
 
-# Install dependencies
-pip install -r requirements.txt
+## Citation
+If using this code, cite the paper (DOI forthcoming). For questions, contact [your email].
 
-# Run the classifier (requires internet access)
-python bpt_classifier.py
-```
-The resulting plot is saved as `BPT_Diagram.png` in the repository root.
+## License
+MIT License (or specify your choice).
 
-## Future Work
-- Include additional BPT diagnostics ([S II] and [O I]).
-- Explore machine learning approaches for automated classification.
-- Investigate redshift evolution and host galaxy correlations.
+
+## Note: > 🔒 Note: This repository accompanies a paper currently under review at MNRAS. The DOI will be updated upon acceptance.
