@@ -28,7 +28,7 @@ Key findings:
 - See `requirements.txt` for pinned versions.
 
 ## Citation
-If using this code, cite the paper (DOI forthcoming). For questions, contact [your email].
+If using this code, cite the paper (DOI forthcoming). For questions, contact [gauravgawade@proton.me].
 
 ## License
 MIT License (or specify your choice).
