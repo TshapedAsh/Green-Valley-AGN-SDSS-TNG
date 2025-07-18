@@ -1,5 +1,7 @@
-pandas
-numpy
-matplotlib
-seaborn
-requests
+pandas==2.0.3
+numpy==1.25.0
+h5py==3.9.0
+matplotlib==3.7.2
+seaborn==0.12.2
+astropy==5.3.0
+scipy==1.11.1
