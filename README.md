@@ -34,4 +34,4 @@ If using this code, cite the paper (DOI forthcoming). For questions, contact [yo
 MIT License (or specify your choice).
 
 
-## Note: > 🔒 Note: This repository accompanies a paper currently under review at MNRAS. The DOI will be updated upon acceptance.
+### 🔒 Note: This repository accompanies a paper currently under review at MNRAS. The DOI will be updated upon acceptance.
