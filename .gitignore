@@ -1,4 +1,22 @@
+# Ignore large data files (can be downloaded from the sources mentioned in README)
+data/*
+
+# Ignore generated outputs
+outputs/*
+
+# Python/Jupyter temp files
 __pycache__/
 *.pyc
-venv/
-BPT_Diagram.png
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environment files
+.venv/
+env/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
