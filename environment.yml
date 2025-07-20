@@ -1,0 +1,16 @@
+name: agn-host-sdss
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core language & Jupyter
+  - python=3.11
+  - numpy=1.26.4     # Pinned for SDSS FITS compatibility (NumPy 2.x breaks newbyteorder)
+  - pandas
+  - h5py
+  - matplotlib
+  - seaborn
+  - astropy
+  - scipy
+  - jupyterlab
+  - ipykernel
