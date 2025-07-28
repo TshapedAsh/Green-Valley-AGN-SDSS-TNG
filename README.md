@@ -26,44 +26,72 @@ Spoiler: **the simulations don't agree with the universe, and it's not even clos
 - **No cherry-picking:** Everything—selection, statistics, figures—is fully reproducible.
 - **All data and code are open.** If you want to test, tweak, or expand, this is your launchpad.
 
-Read the full story and the caveats (we're honest!) in [`paper/paper_draft.pdf`](paper/paper_draft.pdf).
+Read the full story and the caveats (we're honest!) in [`paper/paper_link`](paper/paper_link).
 
 ---
 
 ## 🗂 Repository Structure
 
-Green-Valley-AGN-SDSS-TNG/
-├── master_notebook.ipynb # Main Jupyter notebook: data, analysis, plots
-├── environment.yml # Conda environment for full reproducibility
-├── requirements.txt # Python package list (pip)
-├── data/ # (User-downloaded) input catalogs from SDSS/TNG/EAGLE
-├── outputs/
-│ └── figures/ # All generated plots (PDF/PNG)
-├── paper/
-│ └── paper_draft.pdf # Full manuscript (read this!)
-└── docs/ # (Optional) supplementary documentation
+- `master_notebook.ipynb` — Main Jupyter notebook: data, analysis, plots
+- `environment.yml` — Conda environment for reproducibility
+- `requirements.txt` — Python dependencies (pip)
+- `data/` — Input catalogs (user-downloaded from SDSS/TNG/EAGLE)
+- `outputs/figures/` — All generated plots (.png)
+- `paper/paper_draft.pdf` — Full manuscript (read this!)
+- `docs/` — (Optional) supplementary documentation
+
 
 
 ---
 
 ## 📊 Figures (from `outputs/figures/`)
 
-> *Convert all .pdf figures to .png for embedding here—GitHub won't display PDFs inline!*
+> *All PDFs converted to .png for proper display here!*
 
-- `fig1_colour_mass.png` – Colour–mass plane & sSFR KDE  
+- **Colour–mass plane & sSFR KDE**  
+  `fig1_colour_mass.png`  
   ![Colour–Mass Plane](outputs/figures/fig1_colour_mass.png)
-- `fig2_ssfr_mass_2panel.png` – sSFR–mass relation
-- `fig3_cdf.png` – Cumulative distributions: stellar mass & sSFR
-- `fig4_gv_frac.png` – Green valley occupancy fraction  
+
+- **sSFR–mass relation**  
+  `fig2_ssfr_mass_2panel.png`  
+  ![sSFR–Mass Relation](outputs/figures/fig2_ssfr_mass_2panel.png)
+
+- **Cumulative distributions: stellar mass & sSFR**  
+  `fig3_cdf.png`  
+  ![Cumulative Distributions](outputs/figures/fig3_cdf.png)
+
+- **Green valley occupancy fraction**  
+  `fig4_gv_frac.png`  
   ![GV Occupancy](outputs/figures/fig4_gv_frac.png)
-- `fig5_percentile_sweep.png` – Sensitivity of sSFR gap to colour cut
-- `fig6_bootstrap_KS.png` – Bootstrap KS distributions
-- `fig7_BPT_mock.png` – Mock BPT diagram for simulated analogues  
+
+- **Sensitivity of sSFR gap to colour cut**  
+  `fig5_percentile_sweep.png`  
+  ![Percentile Sweep](outputs/figures/fig5_percentile_sweep.png)
+
+- **Bootstrap KS distributions**  
+  `fig6_bootstrap_KS.png`  
+  ![Bootstrap KS](outputs/figures/fig6_bootstrap_KS.png)
+
+- **Mock BPT diagram for simulated analogues**  
+  `fig7_BPT_mock.png`  
   ![Mock BPT](outputs/figures/fig7_BPT_mock.png)
-- `figure_A1_BPT_Diagram_SDSS.png` – Appendix: SDSS BPT
-- `figure_A2_TNG_EAGLE_GV_Definition.png` – Appendix: Green valley in TNG/EAGLE
-- `figure_A3_mass_comparison.png` – Appendix: Stellar mass KDEs
-- `figure_A4_ssfr_comparison.png` – Appendix: sSFR KDEs
+
+- **Appendix: SDSS BPT**  
+  `figure_A1_BPT_Diagram_SDSS.png`  
+  ![SDSS BPT](outputs/figures/figure_A1_BPT_Diagram_SDSS.png)
+
+- **Appendix: Green valley in TNG/EAGLE**  
+  `figure_A2_TNG_EAGLE_GV_Definition.png`  
+  ![Green Valley Definition](outputs/figures/figure_A2_TNG_EAGLE_GV_Definition.png)
+
+- **Appendix: Stellar mass KDEs**  
+  `figure_A3_mass_comparison.png`  
+  ![Stellar Mass KDEs](outputs/figures/figure_A3_mass_comparison.png)
+
+- **Appendix: sSFR KDEs**  
+  `figure_A4_ssfr_comparison.png`  
+  ![sSFR KDEs](outputs/figures/figure_A4_ssfr_comparison.png)
+
 
 ---
 
@@ -82,11 +110,41 @@ Green-Valley-AGN-SDSS-TNG/
     ```
 
 2. **Download required data:**
-    - SDSS DR7: [MPA-JHU Value-Added Catalogues](https://wwwmpa.mpa-garching.mpg.de/SDSS/DR7/Data/)
-    - IllustrisTNG100-1: [TNG Project](https://www.tng-project.org/data/downloads/TNG100-1/)
-    - EAGLE Ref-L0100N1504: [EAGLE SQL interface](http://virgodb.dur.ac.uk:8080/Eagle/)
 
-    Place downloaded files in the `data/` directory (file names are documented in the notebook).
+Place these files in the `data/` directory:
+
+- **SDSS DR7 (MPA-JHU Value-Added Catalogues)**  
+  Download these files from the [MPA-JHU SDSS DR7 Data Archive](https://wwwmpa.mpa-garching.mpg.de/SDSS/DR7/Data/) and place in the `data/` directory:
+  - `gal_info_dr7_v5_2.fit`
+  - `totlgm_dr7_v5_2b.fit`
+  - `gal_totsfr_dr7_v5_2.fits`
+  - `gal_line_dr7_v5_2.fit`
+
+
+
+- **IllustrisTNG100-1**
+  - `aperture_masses.hdf5` (stellar mass, 30 kpc aperture, snapshot 99)
+  - `stellar_photometry.99.hdf5` (dust-free synthetic photometry, snapshot 99)
+  - All `groupcat-99.*.hdf5` files (full group catalogs for SFR and centrals, snapshot 99; expect ~448 files)
+  
+  Download these from: [TNG100-1 Data Portal](https://www.tng-project.org/data/downloads/TNG100-1/) . Login required.
+  and place in the `data/` directory.
+
+
+- **EAGLE Ref-L0100N1504**  
+  - `EAGLE_data.csv` (produced by running the SQL query in `data/eagle_query.sql`)
+
+  To generate this file:
+  1. Go to the [EAGLE SQL interface](http://virgodb.dur.ac.uk:8080/Eagle/) Login required.
+  2. Open the SQL query stored in `data/eagle_query.sql` from this repository.
+  3. Run the query and export the results as `EAGLE_data.csv`.
+  4. Place the file in the `data/` folder.
+
+  *(Your `EAGLE_data.csv` will include all required columns: GalaxyID, StellarMass, SFR, u_nodust, g_nodust, r_nodust, i_nodust, z_nodust, BlackHoleMass, BlackHoleMassAccretionRate, SubGroupNumber, SnapNum.)*
+
+
+
+
 
 3. **Run the notebook:**
     ```
@@ -99,7 +157,7 @@ Green-Valley-AGN-SDSS-TNG/
 
 ## 📚 More Information
 
-- **All main results, methodology, and caveats are explained in detail in [`paper/paper_draft.pdf`](paper/paper_draft.pdf).**
+- **All main results, methodology, and caveats are explained in detail in [`paper/paper_link`](paper/paper_link).**
 - For full transparency, see appendix and all code logic in the notebook.
 
 ---
@@ -123,8 +181,6 @@ And our open data/software release:
 Gawade, Gaurav. (2025). Green-Valley-AGN-SDSS-TNG [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
 
-
-(Replace Zenodo DOI after upload.)
 
 ---
 
