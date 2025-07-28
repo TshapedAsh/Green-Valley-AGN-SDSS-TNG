@@ -53,8 +53,8 @@ Read the full story and the caveats (we're honest!) in [`paper/paper_link`](pape
   ![Colour–Mass Plane](outputs/figures/fig1_colour_mass.png)
 
 - **sSFR–mass relation**  
-  `fig2_ssfr_mass_2panel.png`  
-  ![sSFR–Mass Relation](outputs/figures/fig2_ssfr_mass_2panel.png)
+  `fig2_ssfr_mass.png`  
+  ![sSFR–Mass Relation](outputs/figures/fig2_ssfr_mass.png)
 
 - **Cumulative distributions: stellar mass & sSFR**  
   `fig3_cdf.png`  
@@ -76,21 +76,21 @@ Read the full story and the caveats (we're honest!) in [`paper/paper_link`](pape
   `fig7_BPT_mock.png`  
   ![Mock BPT](outputs/figures/fig7_BPT_mock.png)
 
+- **Analysis pipeline flowchart**  
+  `fig8_flowchart.png`  
+  ![Flowchart](outputs/figures/fig8_flowchart.png)
+
 - **Appendix: SDSS BPT**  
   `figure_A1_BPT_Diagram_SDSS.png`  
   ![SDSS BPT](outputs/figures/figure_A1_BPT_Diagram_SDSS.png)
 
 - **Appendix: Green valley in TNG/EAGLE**  
-  `figure_A2_TNG_EAGLE_GV_Definition.png`  
-  ![Green Valley Definition](outputs/figures/figure_A2_TNG_EAGLE_GV_Definition.png)
+  `figure_A2_TNG_GV_Definition.png`  
+  ![Green Valley Definition](outputs/figures/figure_A2_TNG_GV_Definition.png)
 
 - **Appendix: Stellar mass KDEs**  
   `figure_A3_mass_comparison.png`  
   ![Stellar Mass KDEs](outputs/figures/figure_A3_mass_comparison.png)
-
-- **Appendix: sSFR KDEs**  
-  `figure_A4_ssfr_comparison.png`  
-  ![sSFR KDEs](outputs/figures/figure_A4_ssfr_comparison.png)
 
 
 ---
@@ -203,3 +203,15 @@ All data, code, and outputs are public, reproducible, and transparent.
 We welcome honest criticism, new ideas, and community forks—help us make galaxy evolution science better!
 
 **Read the full manuscript for the real scientific discussion, all caveats, and next steps—this README is just the "movie trailer" for your curiosity!**
+
+
+## 🙏 Acknowledgements
+
+This github repository benefited from the use of AI-assisted tools—including large language models—for code review, figure captioning and data troubleshooting.  
+The author gratefully acknowledges these technologies as accelerators of the astrophysical research, while affirming that all research decisions, data interpretations, and conclusions presented here are the sole responsibility of the author.
+
+Special thanks to the open-source platforms:
+- **GitHub**, for collaborative code hosting and version control.
+- **Zenodo**, for long-term archival and open sharing of scientific data and software.
+
+The combination of open-source infrastructure and responsible AI usage was key to making this repository fully transparent and accessible.
