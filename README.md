@@ -12,7 +12,7 @@
 This repo hosts all code, processed data, and figures for the paper:
 
 > **"Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE"**  
-> Gaurav Gawade (MNRAS, 2025)
+> Gaurav Gawade (submitted. MNRAS, 2025)
 
 We pit 21,649 real AGN hosts from SDSS DR7 against simulated analogues in IllustrisTNG-100 and EAGLE.  
 Spoiler: **the simulations don't agree with the universe, and it's not even close.** Want details? Dive into the manuscript!
@@ -136,7 +136,7 @@ Place these files in the `data/` directory:
 
   To generate this file:
   1. Go to the [EAGLE SQL interface](http://virgodb.dur.ac.uk:8080/Eagle/) Login required.
-  2. Open the SQL query stored in `data/eagle_query.sql` from this repository.
+  2. Open the SQL query stored in [`data/eagle_query.sql`](data/eagle_query.sql) from this repository.
   3. Run the query and export the results as `EAGLE_data.csv`.
   4. Place the file in the `data/` folder.
 
