@@ -54,7 +54,7 @@ Read the full story and the caveats (we're honest!) in [`paper/paper_link`](pape
 
 - **sSFR–mass relation**  
   `fig2_ssfr_mass.png`  
-  ![sSFR–Mass Relation](outputs/figures/fig2_ssfr_mass.png)
+  ![sSFR–Mass Relation](outputs/figures/fig2_ssfr_mass_2panel.png)
 
 - **Cumulative distributions: stellar mass & sSFR**  
   `fig3_cdf.png`  
@@ -86,7 +86,7 @@ Read the full story and the caveats (we're honest!) in [`paper/paper_link`](pape
 
 - **Appendix: Green valley in TNG/EAGLE**  
   `figure_A2_TNG_GV_Definition.png`  
-  ![Green Valley Definition](outputs/figures/figure_A2_TNG_GV_Definition.png)
+  ![Green Valley Definition](outputs/figures/figure_A2_TNG_EAGLE_GV_Definition.png)
 
 - **Appendix: Stellar mass KDEs**  
   `figure_A3_mass_comparison.png`  
@@ -177,12 +177,12 @@ If you use this code, data, or findings, **please see [`CITATION.cff`](CITATION.
   doi     = {10.5281/zenodo.XXXXXXX}  % Update with actual Zenodo DOI
 }
 
+```
 
 And our open data/software release:
 Gawade, Gaurav. (2025). Green-Valley-AGN-SDSS-TNG [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
-```
----
+
 
 
 ---
