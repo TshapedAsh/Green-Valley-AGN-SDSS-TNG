@@ -181,6 +181,8 @@ If you use this code, data, or findings, **please see [`CITATION.cff`](CITATION.
 And our open data/software release:
 Gawade, Gaurav. (2025). Green-Valley-AGN-SDSS-TNG [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 
+```
+---
 
 
 ---
