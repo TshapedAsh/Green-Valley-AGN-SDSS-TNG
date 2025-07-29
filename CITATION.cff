@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: >
+  If you use this code, data, or findings, please cite the Zenodo release and the accompanying paper (when published).
+
+authors:
+  - family-names: Gawade
+    given-names: Gaurav
+    orcid: https://orcid.org/0009-0002-2177-9941
+
+title: "Green-Valley-AGN-SDSS-TNG: Reproducible Comparison of AGN Host Galaxies in SDSS, IllustrisTNG, and EAGLE"
+version: "1.0"
+doi: 10.5281/zenodo.XXXXXXX  # <-- Replace with your actual Zenodo DOI!
+date-released: 2025-07-XX    # <-- Use Zenodo release date (YYYY-MM-DD)
+license: MIT
+url: https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG
+repository: https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG
+
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Gawade
+      given-names: Gaurav
+      orcid: https://orcid.org/0009-0002-2177-9941
+  title: "Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE"
+  journal: "Monthly Notices of the Royal Astronomical Society"
+  year: 2025
+  doi: 10.XXXX/journal-doi-placeholder   # <-- Replace with actual DOI upon acceptance
+  url: https://arxiv.org/abs/XXXXXXXX     # <-- Replace with arXiv preprint link if available
+  note: "Manuscript in submission; update citation when published."
+
+references:
+  - type: dataset
+    authors:
+      - family-names: Gawade
+        given-names: Gaurav
+    title: "Green-Valley-AGN-SDSS-TNG [Data set]"
+    publisher: "Zenodo"
+    year: 2025
+    doi: 10.5281/zenodo.XXXXXXX  # <-- Same Zenodo DOI as above
+    url: https://doi.org/10.5281/zenodo.XXXXXXX
+
+  - type: software
+    authors:
+      - family-names: Gawade
+        given-names: Gaurav
+    title: "Green-Valley-AGN-SDSS-TNG (GitHub Repository)"
+    url: https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG
+    year: 2025
+    version: "1.0"
+    note: "Open-source analysis and reproducibility code."
