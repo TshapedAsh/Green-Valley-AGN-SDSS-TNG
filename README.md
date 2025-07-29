@@ -12,7 +12,7 @@
 This repo hosts all code, processed data, and figures for the paper:
 
 > **"Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE"**  
-> Gaurav Gawade (submitted. MNRAS, 2025)
+> Gaurav Gawade (submitted, 2025)
 
 We pit 21,649 real AGN hosts from SDSS DR7 against simulated analogues in IllustrisTNG-100 and EAGLE.  
 Spoiler: **the simulations don't agree with the universe, and it's not even close.** Want details? Dive into the manuscript!
@@ -38,7 +38,7 @@ Read the full story and the caveats (we're honest!) in [`paper/paper_link`](pape
 - `data/` — Input catalogs (user-downloaded from SDSS/TNG/EAGLE)
 - `outputs/figures/` — All generated plots (.png)
 - `paper/paper_draft.pdf` — Full manuscript (read this!)
-- `docs/` — (Optional) supplementary documentation
+- `docs/` — supplementary documentation (not necessary for reproducibility)
 
 
 
@@ -46,7 +46,7 @@ Read the full story and the caveats (we're honest!) in [`paper/paper_link`](pape
 
 ## 📊 Figures (from `outputs/figures/`)
 
-> *All PDFs converted to .png for proper display here!*
+> *Core figures from our research are displayed here for the best visibility and for the "motivation" to read our full paper*
 
 - **Colour–mass plane & sSFR KDE**  
   `fig1_colour_mass.png`  
@@ -164,16 +164,17 @@ Place these files in the `data/` directory:
 
 ## 📜 Citation
 
-If you use this code, data, or findings, please cite:
+If you use this code, data, or findings, **please see [`CITATION.cff`](CITATION.cff) for the current citation format and preferred references** (including the Zenodo DOI and manuscript, when available).
 
+**Quick BibTeX example (update fields when your paper/Zenodo record is public):**
+
+```bibtex
 @article{Gawade2025,
-author = {Gaurav Gawade},
-title = {Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE},
-journal = {xyz},
-year = {2025},
-volume = {xxx},
-pages = {yyy--zzz},
-doi = {xxx} 
+  author  = {Gaurav Gawade},
+  title   = {Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE},
+  journal = {To appear},
+  year    = {2025},
+  doi     = {10.5281/zenodo.XXXXXXX}  % Update with actual Zenodo DOI
 }
 
 
@@ -205,9 +206,9 @@ We welcome honest criticism, new ideas, and community forks—help us make galax
 **Read the full manuscript for the real scientific discussion, all caveats, and next steps—this README is just the "movie trailer" for your curiosity!**
 
 
-## 🙏 Acknowledgements
+## 🌟 Acknowledgements
 
-This github repository benefited from the use of AI-assisted tools—including large language models—for code review, figure captioning and data troubleshooting.  
+This github repository benefited from the use of AI-assisted tools—including large language models—for code review and data troubleshooting.  
 The author gratefully acknowledges these technologies as accelerators of the astrophysical research, while affirming that all research decisions, data interpretations, and conclusions presented here are the sole responsibility of the author.
 
 Special thanks to the open-source platforms:
