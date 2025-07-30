@@ -174,13 +174,13 @@ If you use this code, data, or findings, **please see [`CITATION.cff`](CITATION.
   title   = {Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE},
   journal = {To appear},
   year    = {2025},
-  doi     = {10.5281/zenodo.XXXXXXX}  % Update with actual Zenodo DOI
+  doi     = {10.5281/zenodo.16595014}
 }
 
 ```
 
 And our open data/software release:
-Gawade, Gaurav. (2025). Green-Valley-AGN-SDSS-TNG [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+Gawade, Gaurav. (2025). Green-Valley-AGN-SDSS-TNG [Data set]. Zenodo. https://doi.org/10.5281/zenodo.16595014
 
 
 
