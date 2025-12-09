@@ -47,12 +47,12 @@ We compare ≃ **22,000 BPT-selected AGN hosts** from **SDSS DR7** (z < 0.1) to 
 
 ## 🗂 Repository Structure
 
-- `master_notebook_tng_sdss.ipynb` — Main notebook containing all analysis, selections, statistics, and figure generation  
+- `master_notebook_tng_sdss_eagle.ipynb` — Main notebook containing all analysis, selections, statistics, and figure generation  
 - `environment.yml` — Conda environment for full reproducibility  
 - `requirements.txt` — Optional pip dependency list  
 - `data/` — **User-downloaded** SDSS/TNG/EAGLE input catalogues (not included in the repo)  
 - `outputs/figures/` — Publication-ready figures  
-- `paper/` — Manuscript, including `paper_draft_10.pdf`  
+- `paper/` — Manuscript, including `paper_draft.pdf`  
 - `CITATION.cff` — Canonical citation metadata  
 - `LICENSE` — MIT open license  
 
@@ -154,7 +154,7 @@ Place these files in the `data/` directory:
 
 3. **Run the notebook:**
     ```
-    jupyter notebook master_notebook.ipynb
+    jupyter notebook master_notebook_tng_sdss_eagle.ipynb
     ```
     - All figures and stats will be regenerated and saved to `outputs/figures/`.
     - Every analysis step is documented inline with the code.
