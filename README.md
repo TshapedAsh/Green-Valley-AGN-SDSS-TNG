@@ -177,7 +177,7 @@ If you use this code, data, or findings, **please see [`CITATION.cff`](CITATION.
 ```bibtex
 @article{Gawade2025,
   author  = {Gaurav Gawade},
-  title   = {Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE},
+  title   = {Quenching pathways in the green valley at low redshift: confronting SDSS AGN hosts with IllustrisTNG and EAGLE},
   journal = {To appear},
   year    = {2025},
   doi     = {10.5281/zenodo.16595014}
