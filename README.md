@@ -8,106 +8,112 @@
 
 ## 🚀 Project Overview
 
-**Can state-of-the-art simulations actually match the real universe when it comes to AGN host galaxies in the "green valley"?**  
-This repo hosts all code, processed data, and figures for the paper:
+**Can state-of-the-art simulations actually match the real universe when it comes to AGN host galaxies evolving through the “green valley”?**
 
-> **"Quenching in the Green Valley at Low Redshift: A Comparative Analysis of AGN Host Galaxies in SDSS, IllustrisTNG and EAGLE"**  
-> Gaurav Gawade (submitted, 2025)
+This repository hosts all the code, analysis pipeline, and figures for the paper:
 
-We pit 21,649 real AGN hosts from SDSS DR7 against simulated analogues in IllustrisTNG-100 and EAGLE.  
-Spoiler: **the simulations don't agree with the universe, and it's not even close.** Want details? Dive into the manuscript!
+> **“Quenching pathways in the green valley at low redshift: confronting SDSS AGN hosts with IllustrisTNG and EAGLE”**  
+> *Gaurav Gawade (MNRAS – submitted, 2025)*
+
+We compare ≃ **22,000 BPT-selected AGN hosts** from **SDSS DR7** (z < 0.1) to **massive central galaxies** from **IllustrisTNG100-1** and **EAGLE Ref-L0100N1504**, using a **percentile-based green-valley definition** (75th–95th percentiles of *g–r* colour) applied *internally* within each dataset. This avoids dust and calibration systematics while directly testing how simulations populate transitional star-forming regimes.
 
 ---
 
-## 🏆 Why Should You Care?
+## 🏆 Why This Matters
 
-- **Massive sSFR mismatch:** IllustrisTNG "green-valley" galaxies are over-quenched by up to 5.3 dex (!), while EAGLE galaxies are under-quenched by ~1.1 dex.
-- **Simulation overproduction:** TNG overpopulates the green valley by almost an order of magnitude.
-- **No cherry-picking:** Everything—selection, statistics, figures—is fully reproducible.
-- **All data and code are open.** If you want to test, tweak, or expand, this is your launchpad.
+- **IllustrisTNG is almost fully quenched in its “green valley”:**  
+  TNG100 centrals sit near **log sSFR ≃ −14.8**, roughly **3.5 dex below** SDSS AGN hosts (≈ −11.4).  
+  This is not a gentle transition — it is a floor.
 
-Read the full story and the caveats (we're honest!) in [`paper/paper_link`](paper/paper_link).
+- **EAGLE is much closer to the observed universe:**  
+  EAGLE green-valley centrals have **log sSFR ≃ −11.7**, only **0.3–0.4 dex** below SDSS AGN hosts, with a broad distribution spanning both star-forming and quenched systems.
+
+- **Green-valley occupancy differs radically:**  
+  At stellar masses around log₁₀(M\*/M☉) ≈ 11:  
+  - SDSS AGN hosts: **~50–60%**  
+  - TNG100 centrals: **~60%**, but dominated by quenched systems  
+  - EAGLE centrals: **~20–40%**, matching the observed distribution more closely
+
+- **Only ~0.09% of SDSS AGN hosts fall in the TNG-defined GV colour range.**  
+  This result directly supports the idea that **TNG’s kinetic AGN feedback quenches galaxies so abruptly** that they redden only *after* star formation is already gone.
+
+- **Robust to selection tweaks:**  
+  Changing the green-valley lower percentile (60–90%) barely affects the results.
+
+- **Fully reproducible:**  
+  The entire workflow runs through a single notebook with documented steps, fixed RNG seeds, and export of all paper-quality figures.
 
 ---
 
 ## 🗂 Repository Structure
 
-- `master_notebook.ipynb` — Main Jupyter notebook: data, analysis, plots
-- `environment.yml` — Conda environment for reproducibility
-- `requirements.txt` — Python dependencies (pip)
-- `data/` — Input catalogs (user-downloaded from SDSS/TNG/EAGLE)
-- `outputs/figures/` — All generated plots (.png)
-- `paper/paper_draft.pdf` — Full manuscript (read this!)
-- `docs/` — supplementary documentation (not necessary for reproducibility)
-
-
+- `master_notebook_tng_sdss.ipynb` — Main notebook containing all analysis, selections, statistics, and figure generation  
+- `environment.yml` — Conda environment for full reproducibility  
+- `requirements.txt` — Optional pip dependency list  
+- `data/` — **User-downloaded** SDSS/TNG/EAGLE input catalogues (not included in the repo)  
+- `outputs/figures/` — Publication-ready figures  
+- `paper/` — Manuscript, including `paper_draft_10.pdf`  
+- `CITATION.cff` — Canonical citation metadata  
+- `LICENSE` — MIT open license  
 
 ---
 
 ## 📊 Figures (from `outputs/figures/`)
 
-> *Core figures from our research are displayed here for the best visibility and for the "motivation" to read our full paper*
+> *A preview of the main results — full explanations are in the manuscript.*
 
-- **Colour–mass plane & sSFR KDE**  
+- **Colour–Mass Plane & sSFR Density**  
   `fig1_colour_mass.png`  
   ![Colour–Mass Plane](outputs/figures/fig1_colour_mass.png)
 
-- **sSFR–mass relation**  
-  `fig2_ssfr_mass.png`  
+- **sSFR–Mass Comparison (SDSS vs TNG vs EAGLE)**  
+  `fig2_ssfr_mass_2panel.png`  
   ![sSFR–Mass Relation](outputs/figures/fig2_ssfr_mass_2panel.png)
 
-- **Cumulative distributions: stellar mass & sSFR**  
+- **Stellar Mass & sSFR CDFs**  
   `fig3_cdf.png`  
-  ![Cumulative Distributions](outputs/figures/fig3_cdf.png)
+  ![CDFs](outputs/figures/fig3_cdf.png)
 
-- **Green valley occupancy fraction**  
+- **Green Valley Occupancy**  
   `fig4_gv_frac.png`  
-  ![GV Occupancy](outputs/figures/fig4_gv_frac.png)
+  ![Occupancy](outputs/figures/fig4_gv_frac.png)
 
-- **Sensitivity of sSFR gap to colour cut**  
+- **Percentile Sweep Sensitivity Test**  
   `fig5_percentile_sweep.png`  
-  ![Percentile Sweep](outputs/figures/fig5_percentile_sweep.png)
+  ![Sweep](outputs/figures/fig5_percentile_sweep.png)
 
-- **Bootstrap KS distributions**  
+- **Bootstrap KS Distributions**  
   `fig6_bootstrap_KS.png`  
-  ![Bootstrap KS](outputs/figures/fig6_bootstrap_KS.png)
+  ![KS](outputs/figures/fig6_bootstrap_KS.png)
 
-- **Mock BPT diagram for simulated analogues**  
+- **Forward-Modelled BPT for Simulated Analogues**  
   `fig7_BPT_mock.png`  
   ![Mock BPT](outputs/figures/fig7_BPT_mock.png)
 
-- **Analysis pipeline flowchart**  
+- **Analysis Pipeline Flowchart**  
   `fig8_flowchart.png`  
   ![Flowchart](outputs/figures/fig8_flowchart.png)
 
-- **Appendix: SDSS BPT**  
-  `figure_A1_BPT_Diagram_SDSS.png`  
-  ![SDSS BPT](outputs/figures/figure_A1_BPT_Diagram_SDSS.png)
-
-- **Appendix: Green valley in TNG/EAGLE**  
-  `figure_A2_TNG_GV_Definition.png`  
-  ![Green Valley Definition](outputs/figures/figure_A2_TNG_EAGLE_GV_Definition.png)
-
-- **Appendix: Stellar mass KDEs**  
-  `figure_A3_mass_comparison.png`  
-  ![Stellar Mass KDEs](outputs/figures/figure_A3_mass_comparison.png)
-
+- **Appendix & Additional Results**  
+  SDSS BPT, GV definitions, stellar mass KDEs, sSFR distributions, etc.
 
 ---
 
-## 💻 How to Run This Project
+## 💻 How to Run the Project
 
-1. **Clone the repo and set up the environment:**
-    ```
-    git clone https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG.git
-    cd Green-Valley-AGN-SDSS-TNG
-    conda env create -f environment.yml
-    conda activate green-valley-env
-    ```
-    or use pip:
-    ```
-    pip install -r requirements.txt
-    ```
+### 1. Clone the repo and install the environment
+
+
+git clone https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG.git
+cd Green-Valley-AGN-SDSS-TNG
+
+# Recommended
+conda env create -f environment.yml
+conda activate green-valley-env
+
+# Optional
+pip install -r requirements.txt
+
 
 2. **Download required data:**
 
