@@ -13,7 +13,7 @@
 This repository hosts all the code, analysis pipeline, and figures for the paper:
 
 > **“Quenching pathways in the green valley at low redshift: confronting SDSS AGN hosts with IllustrisTNG and EAGLE”**  
-> *Gaurav Gawade (MNRAS – submitted, 2025)*
+> *Gaurav Gawade (Submitted, 2025)*
 
 We compare ≃ **19,000 BPT-selected pure AGN hosts** from **SDSS DR7** (z < 0.1) to **massive central galaxies** from **IllustrisTNG100-1** and **EAGLE Ref-L0100N1504**, using a **percentile-based green-valley definition** (75th–95th percentiles of *g–r* colour) applied *internally* within each dataset. This avoids dust and calibration systematics while directly testing how simulations populate transitional star-forming regimes.
 
@@ -181,7 +181,7 @@ If you use this code, data, or findings, **please see [`CITATION.cff`](CITATION.
   title   = {Quenching pathways in the green valley at low redshift: confronting SDSS AGN hosts with IllustrisTNG and EAGLE},
   journal = {To appear},
   year    = {2025},
-  doi     = {10.5281/zenodo.17872418}
+  doi     = {10.5281/zenodo.17917468}
 }
 
 ```
