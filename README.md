@@ -15,7 +15,7 @@ This repository hosts all the code, analysis pipeline, and figures for the paper
 > **“Quenching pathways in the green valley at low redshift: confronting SDSS AGN hosts with IllustrisTNG and EAGLE”**  
 > *Gaurav Gawade (MNRAS – submitted, 2025)*
 
-We compare ≃ **22,000 BPT-selected AGN hosts** from **SDSS DR7** (z < 0.1) to **massive central galaxies** from **IllustrisTNG100-1** and **EAGLE Ref-L0100N1504**, using a **percentile-based green-valley definition** (75th–95th percentiles of *g–r* colour) applied *internally* within each dataset. This avoids dust and calibration systematics while directly testing how simulations populate transitional star-forming regimes.
+We compare ≃ **19,000 BPT-selected pure AGN hosts** from **SDSS DR7** (z < 0.1) to **massive central galaxies** from **IllustrisTNG100-1** and **EAGLE Ref-L0100N1504**, using a **percentile-based green-valley definition** (75th–95th percentiles of *g–r* colour) applied *internally* within each dataset. This avoids dust and calibration systematics while directly testing how simulations populate transitional star-forming regimes.
 
 ---
 
@@ -34,7 +34,7 @@ We compare ≃ **22,000 BPT-selected AGN hosts** from **SDSS DR7** (z < 0.1) to 
   - TNG100 centrals: **~60%**, but dominated by quenched systems  
   - EAGLE centrals: **~20–40%**, matching the observed distribution more closely
 
-- **Only ~0.09% of SDSS AGN hosts fall in the TNG-defined GV colour range.**  
+- **Only ~0.03% of SDSS AGN hosts fall in the TNG-defined GV colour range.**  
   This result directly supports the idea that **TNG’s kinetic AGN feedback quenches galaxies so abruptly** that they redden only *after* star formation is already gone.
 
 - **Robust to selection tweaks:**  
@@ -113,6 +113,7 @@ conda activate green-valley-env
 
 # Optional
 pip install -r requirements.txt
+
 
 
 2. **Download required data:**
