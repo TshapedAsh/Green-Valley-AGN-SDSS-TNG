@@ -9,7 +9,7 @@ authors:
 
 title: "Green-Valley-AGN-SDSS-TNG: Reproducible Comparison of AGN Host Galaxies in SDSS, IllustrisTNG, and EAGLE"
 version: "1.0"
-doi: 10.5281/zenodo.17872418
+doi: 10.5281/zenodo.17917468
 date-released: 2025-07-30
 license: MIT
 url: https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG
@@ -36,8 +36,8 @@ references:
     title: "Green-Valley-AGN-SDSS-TNG [Data set]"
     publisher: "Zenodo"
     year: 2025
-    doi: 10.5281/zenodo.17872418
-    url: https://doi.org/10.5281/zenodo.17872418
+    doi: 10.5281/zenodo.17917468
+    url: https://doi.org/10.5281/zenodo.17917468
 
   - type: software
     authors:
