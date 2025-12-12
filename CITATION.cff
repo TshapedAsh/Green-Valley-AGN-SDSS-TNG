@@ -8,7 +8,7 @@ authors:
     orcid: https://orcid.org/0009-0002-2177-9941
 
 title: "Green-Valley-AGN-SDSS-TNG: Reproducible Comparison of AGN Host Galaxies in SDSS, IllustrisTNG, and EAGLE"
-version: "1.0"
+version: "2.1"
 doi: 10.5281/zenodo.17917468
 date-released: 2025-07-30
 license: MIT
@@ -46,5 +46,5 @@ references:
     title: "Green-Valley-AGN-SDSS-TNG (GitHub Repository)"
     url: https://github.com/TshapedAsh/Green-Valley-AGN-SDSS-TNG
     year: 2025
-    version: "1.0"
+    version: "2.1"
     note: "Open-source analysis and reproducibility code."
