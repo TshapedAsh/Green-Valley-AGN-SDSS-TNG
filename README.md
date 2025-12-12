@@ -131,7 +131,7 @@ Place these files in the `data/` directory:
 
 - **IllustrisTNG100-1**
   - `aperture_masses.hdf5` (stellar mass, 30 kpc aperture, snapshot 99)
-  - `stellar_photometry.99.hdf5` (dust-free synthetic photometry, snapshot 99)
+  - `stellar_photometry.99.hdf5` (dust-attenuated synthetic photometry (cf00dust), snapshot 99)
   - All `groupcat-99.*.hdf5` files (full group catalogs for SFR and centrals, snapshot 99; expect ~448 files)
   
   Download these from: [TNG100-1 Data Portal](https://www.tng-project.org/data/downloads/TNG100-1/) . Login required.
